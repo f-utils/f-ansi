@@ -1,4 +1,3 @@
-
 ```
   /$$$$$$                                   /$$
  /$$__  $$                                 |__/
@@ -24,9 +23,10 @@ f_ansi/
   |-- __init__.py .............. import main.py
   |-- main.py .................. import modules
   `-- mods/
-       |-- module1.py .......... does something
-       |-- module2.py .......... does some other thing
-       `-- ... 
+       |-- color/ .............. define Color class
+       |-- keys/ ............... define Keys class
+       |-- is_.py .............. define Is class
+       `-- err_.py ............. define error classes       
 ```
 
 # Install
