@@ -1,14 +1,23 @@
 [project]
-name = "f-{lib}"
+name = "f-ansi"
 version = "0.0.0"
 authors = [
-    {name = "{your_name}", email = "{your@email.com}"},
+    {name = "Yuri Ximenes", email = "yx.dev@gmx.ie"},
 ]
-description = "The f-utils lib that does something."
+description = "The f-utils lib that deals with ANSI code."
 readme = "README.md"
 license = {text = "BSD"}
 requires-python = ">=3.9"
 
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = [
+    "setuptools>=61.0",
+    "wheel",
+    "git+https://github.com/f-utils/f",
+    "git+https://github.com/f-utils/f-core"
+]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["f_ansi*"]

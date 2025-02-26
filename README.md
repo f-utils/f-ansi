@@ -1,34 +1,26 @@
 
 ```
-  /$$$$$$      /$$ /$$ /$$      
- /$$__  $$    | $$|__/| $$      
-| $$  \__/    | $$ /$$| $$$$$$$ 
-| $$$$ /$$$$$$| $$| $$| $$__  $$
-| $$_/|______/| $$| $$| $$  \ $$
-| $$          | $$| $$| $$  | $$
-| $$          | $$| $$| $$$$$$$/
-|__/          |__/|__/|_______/
-
-------------------------------------------
-Replace the above with the name of the lib. Use figlet font 'bigmoney-ne'.
-> https://patorjk.com/software/taag/#p=display&f=Big%20Money-ne&t=f-lib
-Altenativelly, install 'figlet' and font 'bigmoney-ne':
-> figlet: http://www.figlet.org/figlet-man.html
-> font: https://github.com/xero/figlet-fonts/blob/master/Big%20Money-ne.flf 
-------------------------------------------
+  /$$$$$$                                   /$$
+ /$$__  $$                                 |__/
+| $$  \__/     /$$$$$$  /$$$$$$$   /$$$$$$$ /$$
+| $$$$ /$$$$$$|____  $$| $$__  $$ /$$_____/| $$
+| $$_/|______/ /$$$$$$$| $$  \ $$|  $$$$$$ | $$
+| $$          /$$__  $$| $$  | $$ \____  $$| $$
+| $$         |  $$$$$$$| $$  | $$ /$$$$$$$/| $$
+|__/          \_______/|__/  |__/|_______/ |__/
 ```                       
 
 # About
 
-`f-{lib}` is the  `f-utils` lib that does something.
-- website: [futils.org/libs/f-{lib}](https://futils.org/libs/f-{lib})
+`f-ansi` is the  `f-utils` lib that does something.
+- website: [futils.org/libs/f-ansi](https://futils.org/libs/f-ansi)
 - contact: [futils@gmx.ie](mailto:futils@gmx.ie)
 - discord: [coolab](https://discord.gg/waANUyCUGE)
 
 # Structure
 
 ```
-f_{lib}/
+f_ansi/
   |-- __init__.py .............. import main.py
   |-- main.py .................. import modules
   `-- mods/
@@ -44,22 +36,22 @@ The installation is from the branches `main` and `dev` of this repository.
 - With `pip`:
 ```bash
 # main branch
-/path/to/venv/bin/pip install git+https://github.com/f-utils/f-{lib}
+/path/to/venv/bin/pip install git+https://github.com/f-utils/f-ansi
 # dev branch
-/path/to/venv/bin/pip install git+https://github.com/f-utils/f-{lib}/tree/dev
+/path/to/venv/bin/pip install git+https://github.com/f-utils/f-ansi/tree/dev
 ```
 
 For other installation methods, see [futils.org/install](https://futils.org/install).
 
 # Usage
 
-The lib provides the class `{Lib}`. We suggest to import it as:
+The lib provides the class `Ansi`. We suggest to import it as:
 
 ```python
-from f_{lib} import {Lib} as {lib}
+from f_ansi import Ansi as ansi
 ```
 
-For more details, see [futils.org/libs/f-{lib}](https://futils.org/libs/f-{lib}).
+For more details, see [futils.org/libs/f-ansi](https://futils.org/libs/f-ansi).
 
 # Contributing
 
