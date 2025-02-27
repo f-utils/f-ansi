@@ -1,5 +1,5 @@
 from f import f
-from f_ansi.mods.color.codes_ import ANSI_COLORS, ANSI_STYLES
+from f_ansi.mods.color.codes_ import COLORS, STYLES
 from f_ansi.mods.is_ import Is
 from f_core import typed, o
 
@@ -21,7 +21,7 @@ def color_(color_input: o.join(str, tuple), style_codes: list = []) -> tuple:
     sanitized_input = sanitize_(color_input)
 
     if Is.color(sanitized_input):
-        color_code = ANSI_COLORS[sanitized_input]
+        color_code = COLORS[sanitized_input]
         return color_code, style_codes
 
     if Is.hex(color_input):
@@ -31,7 +31,7 @@ def color_(color_input: o.join(str, tuple), style_codes: list = []) -> tuple:
         rgb_color_code = f"38;2;{rgb[0]};{rgb[1]};{rgb[2]}"
         return rgb_color_code, style_codes
 
-    valid_colors = ', '.join(ANSI_COLORS.keys())
+    valid_colors = ', '.join(COLORS.keys())
     raise ValueError(f"Invalid color input: must be a valid RGB, color name, or HEX color. "
                      f"Valid color names are: {valid_colors}")
 
@@ -40,11 +40,11 @@ def style_(style_inputs: tuple, style_codes: list = []) -> list:
     new_style_codes = style_codes.copy()
     for style_input in style_inputs:
         if not Is.style(style_input):
-            valid_styles = ', '.join(ANSI_STYLES.keys())
+            valid_styles = ', '.join(STYLES.keys())
             raise ValueError(f"Invalid style input: '{style_input}' is not a valid style name. "
                              f"Valid styles are: {valid_styles}")
         sanitized_input = sanitize_(style_input)
-        style_code = ANSI_STYLES[sanitized_input]
+        style_code = STYLES[sanitized_input]
         if style_code not in new_style_codes:
             new_style_codes.append(style_code)
     return new_style_codes
