@@ -1,15 +1,20 @@
-from f_ansi.mods.color.codes_ import ANSI_COLORS, ANSI_STYLES
 import re
+from f_ansi.mods.color.codes_ import (
+        COLORS,
+        STYLES,
+        REGEX_HEX,
+        REGEX_RGB
+)
 
 class Is:
     @staticmethod
     def hex(value: str) -> bool:
-        hex_pattern = re.compile(r'^#(?:[0-9a-fA-F]{3}){1,2}$')
+        hex_pattern = re.compile(REGEX_HEX)
         return bool(hex_pattern.match(value))
 
     @staticmethod
     def rgb(value: str) -> bool:
-        rgb_pattern = re.compile(r'^\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$')
+        rgb_pattern = re.compile(REGEX_RGB)
         match = rgb_pattern.match(value)
         if match:
             r, g, b = match.groups()
@@ -19,9 +24,9 @@ class Is:
     @staticmethod
     def color(value: str) -> bool:
         sanitized_value = value.strip().upper()
-        return sanitized_value in ANSI_COLORS
+        return sanitized_value in COLORS
 
     @staticmethod
     def style(value: str) -> bool:
         sanitized_value = value.strip().upper()
-        return sanitized_value in ANSI_STYLES
+        return sanitized_value in STYLES

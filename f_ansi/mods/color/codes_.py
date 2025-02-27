@@ -1,13 +1,13 @@
-ANSI_RESET = "\033[0m"
+RESET = "\033[0m"
 
-ANSI_STYLES = {
+STYLES = {
     'BOLD': '1',
     'ITALIC': '3',
     'UNDERLINE': '4',
     'NORMAL': '0'
 }
 
-ANSI_COLORS = {
+COLORS = {
     'RED': '31',
     'GREEN': '32',
     'YELLOW': '33',
@@ -23,3 +23,6 @@ ANSI_COLORS = {
     'BRIGHT_CYAN': '96',
     'BRIGHT_WHITE': '97',
 }
+
+REGEX_HEX = r'^#(?:[0-9a-fA-F]{3}){1,2}$'
+REGEX_RGB = r'^\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$'
