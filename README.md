@@ -41,14 +41,14 @@ The installation is from the branches `main` and `dev` of this repository.
 /path/to/venv/bin/pip install git+https://github.com/f-utils/f-ansi/tree/dev
 ```
 
-For other installation methods, see [futils.org/install](https://futils.org/install).
+For other installation methods, see [futils.org/install](https://futils.org/docs/libs/install).
 
 # Usage
 
 The lib provides the class `Ansi`. We suggest to import it as:
 
 ```python
-from f_ansi import Ansi as ansi
+from f_ansi import Ansi
 ```
 
 For more details, see [futils.org/libs/f-ansi](https://futils.org/libs/f-ansi).
